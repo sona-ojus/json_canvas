@@ -24,6 +24,6 @@ button{
     font-size: 17px;
     font-family: Calibri;
     background-color: lightgoldenrodyellow;
-    border: 1px solid grey;
     margin: 5px;
+    overflow-wrap: break-word;
 }
