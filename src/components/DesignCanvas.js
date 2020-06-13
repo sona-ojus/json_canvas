@@ -19,8 +19,10 @@ class DesignCanvas extends React.Component {
   }
 
   componentDidMount() {
-    this.state.canvas.clear();
-    const canvas = new fabric.Canvas(this.c);
+    if(this.state.canvas != null)
+      this.state.canvas.clear();
+    
+      const canvas = new fabric.Canvas(this.c);
     this.setState({ canvas })
   }
 

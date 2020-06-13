@@ -5,6 +5,7 @@ import DesignCanvas from './DesignCanvas'
 import Image from './Image'
 
 import '../styles/App.css'
+import sample_data from '../data'
 
 class App extends React.Component{
     constructor(props){
@@ -101,7 +102,9 @@ class App extends React.Component{
 
         return(
             <div>
-                <textarea id="json_input"></textarea>
+                <textarea id="json_input">
+                    {JSON.stringify(sample_data)}
+                </textarea>
                 <button onClick={this.readJSON}>Design Canvas</button>
                 {button}
                 <div id="export"></div>
