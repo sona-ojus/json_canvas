@@ -13,11 +13,19 @@ class Image extends React.Component {
     scale: 1.0,
   }
 
+  componentDidMount() {
+    this.createImage(this.props);
+  }
+
   componentWillReceiveProps(newProps) {
-      const image = new fabric.Image.fromURL(newProps.imageD.exportedAsset, img => {
-        this.props.canvas.add(img);
-        this.setState({ image })
-      }, newProps.imageD);
+      this.createImage(newProps);
+  }
+
+  createImage = (newProps) => {
+    const image = new fabric.Image.fromURL(newProps.imageD.exportedAsset, img => {
+      this.props.canvas.add(img);
+      this.setState({ image })
+    }, newProps.imageD);
   }
 
   render() {

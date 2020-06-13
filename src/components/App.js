@@ -78,7 +78,7 @@ class App extends React.Component{
             temp.top = child.y;
             return temp;
         });
-        this.setState({children: canvas_details.children});
+        this.setState({children: canvas_details.children.reverse()});
         this.setState({originalDimensions: canvas_details});
         this.setState({showCanvas: true});
     }
